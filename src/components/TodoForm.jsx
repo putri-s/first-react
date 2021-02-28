@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 
 const TodoForm = ({ addTodo }) => {
   const [value, setValue] = useState("");
-
   //untuk menghandle onSubmit di dalam form
   const handleFormSubmit = (e) => {
     e.preventDefault();
