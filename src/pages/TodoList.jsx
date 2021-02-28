@@ -13,17 +13,22 @@ const TodoList = () => {
     { text: `Belajar3` }
   ]);
 
+  //state showAdd
+  const [showAdd, setShowAdd] = useState(false);
+
   const addTodo = (value) => {
     const addedTodo = [...todos, { text: value }];
 
     setTodos(addedTodo);
   };
 
+  const showAddToggle = () => setShowAdd(!showAdd);
+
   return (
     <Paper>
-      <Header />
+      <Header showAddToggle={showAddToggle} showAdd={showAdd} />
 
-      <TodoForm addTodo={addTodo} />
+      <TodoForm addTodo={addTodo} showAdd={showAdd} />
 
       <Todos todos={todos} />
     </Paper>
