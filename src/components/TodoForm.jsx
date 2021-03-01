@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 const TodoForm = ({ addTodo, showAdd }) => {
-  const [value, setValue] = useState("");
-  //untuk menghandle onSubmit di dalam form
+  //state value = u/ menangkap "apapun" yang diinput di form
+  const [value, setValue] = useState(``);
+
+  //function untuk menghandle onSubmit di dalam form
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
@@ -18,8 +20,12 @@ const TodoForm = ({ addTodo, showAdd }) => {
       return;
     }
 
+    //addTodo akan menerima "apapun" dari state value yg akan dikirim keluar dari TodoForm.
+    //addTodo merupakan props berisi func
+    //yg akan didelegasikan dari luar TodoForm ke dalam TodoForm untuk diproses
+    //yg akan mengembalikan sebuah value yg akan diproses oleh pemilik func addTodo (TodoList)
     addTodo(value);
-    setValue("");
+    setValue(``);
   };
 
   if (showAdd) {
@@ -29,7 +35,9 @@ const TodoForm = ({ addTodo, showAdd }) => {
           <input
             type="text"
             className="add-input"
+            //isi value dinamis
             value={value}
+            // onChange menerima aksi setValue yg akan mem-passing "apapun yg diketik" ke dlm value
             onChange={(e) => setValue(e.target.value)}
           ></input>
           <button className="add-btn black-color">Add</button>

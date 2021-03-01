@@ -14,14 +14,6 @@
   box-sizing: border-box;
 }
 
-.red-color {
-  color: var(--color-red);
-}
-
-.black-color {
-  color: var(--color-black);
-}
-
 html {
   font-size: 10px;
 }
@@ -40,12 +32,6 @@ html {
   margin: 0;
   padding: 0;
   font-family: var(--body-font);
-}
-
-button {
-  font-family: var(--btn-font);
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 .container {
@@ -74,30 +60,12 @@ button {
 }
 
 .header-title {
-  flex: 1;
+  width: 52%;
   text-align: center;
 
   color: var(--color-black);
   font-size: 5rem;
   font-family: var(--header-font);
-}
-
-.header-btn {
-  font-size: 1.8rem;
-  font-weight: bold;
-
-  padding: 16px;
-  cursor: pointer;
-
-  background: unset;
-  border: unset;
-  outline: unset;
-}
-
-.header-btn.red-color:active,
-.header-btn.black-color:active,
-.add-btn.black-color:active {
-  text-shadow: 1px 1px 2px var(--color-red);
 }
 
 .add {
@@ -122,18 +90,6 @@ button {
   font-family: var(--body-font);
   font-size: 16px;
   text-transform: lowercase;
-}
-
-.add-btn {
-  font-size: 1.8rem;
-
-  padding: 16px;
-  padding-right: unset;
-  cursor: pointer;
-
-  background: unset;
-  border: unset;
-  outline: unset;
 }
 
 .todos {
@@ -163,4 +119,15 @@ button {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
+}
+
+.todo-placeholder-text {
+  font-family: var(--btn-font);
+  font-size: 24px;
+  text-align: center;
+  padding: 16px;
+}
+
+.add-button-placeholder {
+  font-size: 24px;
 }

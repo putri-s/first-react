@@ -1,0 +1,61 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap&family=Comfortaa&family=Mrs+Saint+Delafield&display=swap");
+
+@import url(../../styles.css);
+
+.redColor {
+  color: var(--color-red);
+}
+
+.blackColor {
+  color: var(--color-black);
+}
+
+.alignLeft {
+  text-align: left;
+}
+
+.alignRight {
+  text-align: right;
+}
+
+button {
+  font-family: var(--btn-font);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.headerBtn {
+  width: 24%;
+  font-size: 1.8rem;
+  font-weight: bold;
+
+  padding: 16px;
+  cursor: pointer;
+
+  background: unset;
+  border: unset;
+  outline: unset;
+}
+
+.headerBtn.redColor:active,
+.headerBtn.blackColor:active,
+.addBtn.blackColor:active {
+  text-shadow: 1px 1px 2px var(--color-red);
+}
+
+.addBtn {
+  font-size: 1.8rem;
+
+  padding: 16px;
+  padding-right: unset;
+  cursor: pointer;
+
+  background: unset;
+  border: unset;
+  outline: unset;
+}
+
+.addButtonPlaceholder {
+  font-size: 24px;
+}
