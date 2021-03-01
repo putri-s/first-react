@@ -1,0 +1,17 @@
+@import url(../../vars.css);
+
+.header {
+  display: flex;
+
+  /* memulai items secara vertikal (pendekatan secara vertikal) */
+  align-items: flex-start;
+}
+
+.headerTitle {
+  width: 52%;
+  text-align: center;
+
+  color: var(--color-black);
+  font-size: 5rem;
+  font-family: var(--header-font);
+}

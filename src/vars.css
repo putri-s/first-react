@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap&family=Comfortaa&family=Mrs+Saint+Delafield&display=swap");
+
+/* Variables */
+:root {
+  --body-font: "Comfortaa", cursive;
+  --header-font: "Mrs Saint Delafield", cursive;
+  --btn-font: "Righteous", cursive;
+  --color-red: darkred;
+  --color-black: #484848;
+}

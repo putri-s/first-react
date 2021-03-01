@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 
+import styles from "./todoForm.module.css";
+
 const TodoForm = ({ addTodo, showAdd }) => {
   //state value = u/ menangkap "apapun" yang diinput di form
   const [value, setValue] = useState(``);
@@ -30,17 +32,17 @@ const TodoForm = ({ addTodo, showAdd }) => {
 
   if (showAdd) {
     return (
-      <section className="add">
-        <form className="add-form" onSubmit={handleFormSubmit}>
+      <section className={styles.add}>
+        <form className={styles.addForm} onSubmit={handleFormSubmit}>
           <input
             type="text"
-            className="add-input"
+            className={styles.addInput}
             //isi value dinamis
             value={value}
             // onChange menerima aksi setValue yg akan mem-passing "apapun yg diketik" ke dlm value
             onChange={(e) => setValue(e.target.value)}
           ></input>
-          <button className="add-btn black-color">Add</button>
+          <button className={styles.addBtn}>Add</button>
         </form>
       </section>
     );
